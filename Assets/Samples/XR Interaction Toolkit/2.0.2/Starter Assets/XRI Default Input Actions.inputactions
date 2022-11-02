@@ -88,6 +88,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Velocity",
+                    "type": "Value",
+                    "id": "3f6deac3-3abc-418e-be85-9e32aa24fbbf",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -200,6 +209,17 @@
                     "action": "Tracking State",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cfe6337-a7e1-47bf-b4a0-fccef5a71f73",
+                    "path": "<OculusTouchController>{LeftHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -214,7 +234,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Select Value",
@@ -606,6 +626,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Velocity",
+                    "type": "Value",
+                    "id": "0676a3ff-f99d-444c-9c1f-eb8b0fe2ef32",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -718,6 +747,17 @@
                     "action": "Tracking State",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b5f0b32-3aac-4f1e-afc0-a9002976bf9e",
+                    "path": "<OculusTouchController>{RightHand}/devicePose/velocity",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Velocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -732,7 +772,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Select Value",
