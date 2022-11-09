@@ -9,24 +9,17 @@ public class hook : MonoBehaviour
 {
     [SerializeField] private GameObject checkingRay;
     [SerializeField] private GameObject pressedButton;
-    private bool ha = false;
-    private float strengthOfAttraction = 0.5f;
+    [SerializeField] private Transform defaultRotation;
+    public bool ha = false;
+    private float strengthOfAttraction = 5.0f;
 
     private Vector3 teleportation;
-
-    private Vector3 defaultRotation = new Vector3(0, 0, 0);
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         if (checkingRay.activeSelf && !ha)
         {
-            Debug.Log("fsdhgkjdsg");
             ha = true;
             teleportation = checkingRay.GetComponent<Transform>().position;
         }else if (!checkingRay.activeSelf && ha)
@@ -40,14 +33,16 @@ public class hook : MonoBehaviour
         var button_vroom = pressedButton.GetComponent<handInput>().vroom;
         if (ha && button_vroom)
         {
-            //suck++;
             transform.LookAt(teleportation);
             if((transform.position - teleportation).magnitude>Mathf.Epsilon)
             {
                 transform.Translate(0.0f,0.0f,strengthOfAttraction*Time.deltaTime);
             }
-
-            button_vroom = false;
+            pressedButton.GetComponent<handInput>().vroom = false;
+        }
+        if(this.transform.rotation!=defaultRotation.rotation)
+        {
+            this.transform.rotation = defaultRotation.rotation;
         }
         
     }

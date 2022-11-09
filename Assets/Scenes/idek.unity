@@ -240,7 +240,6 @@ GameObject:
   - component: {fileID: 426480145}
   - component: {fileID: 426480144}
   - component: {fileID: 426480143}
-  - component: {fileID: 426480146}
   m_Layer: 0
   m_Name: ha
   m_TagString: Untagged
@@ -571,20 +570,6 @@ MonoBehaviour:
   m_RotateSpeed: 180
   m_TranslateSpeed: 1
   m_AnchorRotateReferenceFrame: {fileID: 0}
---- !u!114 &426480146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 426480141}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90ccd3de8233b0429733f81c7bb78f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkingRay: {fileID: 452018496}
-  pressedButton: {fileID: 1444992781}
 --- !u!1 &452018496
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +781,6 @@ GameObject:
   - component: {fileID: 541419796}
   - component: {fileID: 541419795}
   - component: {fileID: 541419794}
-  - component: {fileID: 541419793}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -819,20 +803,6 @@ Transform:
   m_Father: {fileID: 1338177278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &541419793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541419791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90ccd3de8233b0429733f81c7bb78f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkingRay: {fileID: 0}
-  pressedButton: {fileID: 0}
 --- !u!114 &541419794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,7 +1296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338177277}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 072a864744e607e45b1eef6ec2d3425f, type: 3}
   m_Name: 
@@ -1378,6 +1348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkingRay: {fileID: 452018496}
   pressedButton: {fileID: 1444992781}
+  defaultRotation: {fileID: 51688398}
+  ha: 0
 --- !u!54 &1768503192
 Rigidbody:
   m_ObjectHideFlags: 0
