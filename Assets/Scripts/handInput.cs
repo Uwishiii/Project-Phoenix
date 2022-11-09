@@ -7,9 +7,10 @@ public class handInput : MonoBehaviour
 {
 //Stores what kind of characteristics we’re looking for with our Input Device when we search for it later
     public InputDeviceCharacteristics inputDeviceCharacteristics;
-    [SerializeField] private GameObject hook;
+    public GameObject hook;
+    [SerializeField] private GameObject otherController;
     private bool putOnHook = false;
-    public bool vroom = false;
+    public bool hookStart = false;
 
 //Stores the InputDevice that we’re Targeting once we find it in InitializeHand()
     private InputDevice _targetDevice;
@@ -54,20 +55,21 @@ public class handInput : MonoBehaviour
         if (_targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue) && triggerValue > 0.1f)
         {
             Debug.Log("trigger pressed");
-            if (!vroom)
+            if (!hookStart)
             {
-                vroom = true;
+                hookStart = true;
             }
         }
 //This will get the value for our grip from the target device and output a flaot into gripValue
         if (_targetDevice.TryGetFeatureValue(CommonUsages.grip, out float gripValue) && gripValue > 0.1f)
         {
             Debug.Log("grip pressed");
+            hookStart = false;
         }
         if (_targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue) && primaryValue)
         {
             Debug.Log("primary pressed");
-            if (!putOnHook)
+            if (!putOnHook && otherController.GetComponent<handInput>().hook.activeSelf == false)
             {
                 hook.SetActive(true);
                 
