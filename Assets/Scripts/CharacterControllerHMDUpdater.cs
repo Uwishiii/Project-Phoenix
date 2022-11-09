@@ -5,13 +5,13 @@ using UnityEngine.XR.Interaction.Toolkit;
 using Unity.XR.CoreUtils;
 public class CharacterControllerHMDUpdater : MonoBehaviour
 {
-    public float gravity = 1f;
+    //public float gravity = 1f;
 
     private XROrigin _xrRig;
     private CharacterController _characterController;
     private CharacterControllerDriver _driver;
 
-    private bool _climbing = false;
+    //private bool _climbing = false;
     // Start is called before the first frame update
     void Start()
     {
